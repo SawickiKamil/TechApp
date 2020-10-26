@@ -22,6 +22,12 @@ TechApp is built like a todo list. It was created for the purpose of better unde
 - [MongoDB]
 - [Mongosse]
 
+### Installation
+
+Make sure you have set up a node and mongoDB environment
+
+- https://docs.mongodb.com/manual/administration/install-community/
+- https://www.npmjs.com/get-npm
 
 ### Front-End Installation
 
