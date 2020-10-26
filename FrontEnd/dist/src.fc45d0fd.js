@@ -101532,7 +101532,93 @@ Object.keys(_addTechButton).forEach(function (key) {
     }
   });
 });
-},{"./addTechButton":"src/componets/baseComponents/buttons/addTechButton/addTechButton.tsx"}],"src/componets/baseComponents/buttons/index.ts":[function(require,module,exports) {
+},{"./addTechButton":"src/componets/baseComponents/buttons/addTechButton/addTechButton.tsx"}],"src/componets/baseComponents/buttons/deleteButton/deleteButton.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  var _a;
+
+  return (0, _createStyles.default)({
+    deleteButton: (_a = {
+      width: 200,
+      backgroundColor: theme.customPalette.red,
+      '&:hover': {
+        backgroundColor: theme.customPalette.darkRed,
+        transition: 'all .4s ease'
+      }
+    }, _a[theme.breakpoints.down('sm')] = {
+      width: 100,
+      fontSize: 16
+    }, _a)
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/deleteButton/deleteButton.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DeleteButton = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _deleteButton = _interopRequireDefault(require("./deleteButton.styles"));
+
+var _core = require("@material-ui/core");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var DeleteButton = function DeleteButton(_a) {
+  var onDelete = _a.onDelete,
+      _id = _a._id;
+  var classes = (0, _deleteButton.default)();
+  var handleDelete = React.useCallback(function (event) {
+    onDelete(_id);
+  }, [onDelete, _id]);
+  return React.createElement(_core.Button, {
+    onClick: handleDelete,
+    className: classes.deleteButton
+  }, "Delete");
+};
+
+exports.DeleteButton = DeleteButton;
+},{"react":"node_modules/react/index.js","./deleteButton.styles":"src/componets/baseComponents/buttons/deleteButton/deleteButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/deleteButton/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _deleteButton = require("./deleteButton");
+
+Object.keys(_deleteButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _deleteButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _deleteButton[key];
+    }
+  });
+});
+},{"./deleteButton":"src/componets/baseComponents/buttons/deleteButton/deleteButton.tsx"}],"src/componets/baseComponents/buttons/index.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -101564,7 +101650,20 @@ Object.keys(_addTechButton).forEach(function (key) {
     }
   });
 });
-},{"./formikButton":"src/componets/baseComponents/buttons/formikButton/index.ts","./addTechButton":"src/componets/baseComponents/buttons/addTechButton/index.ts"}],"src/componets/baseComponents/customDialog/customDialog.tsx":[function(require,module,exports) {
+
+var _deleteButton = require("./deleteButton");
+
+Object.keys(_deleteButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _deleteButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _deleteButton[key];
+    }
+  });
+});
+},{"./formikButton":"src/componets/baseComponents/buttons/formikButton/index.ts","./addTechButton":"src/componets/baseComponents/buttons/addTechButton/index.ts","./deleteButton":"src/componets/baseComponents/buttons/deleteButton/index.ts"}],"src/componets/baseComponents/customDialog/customDialog.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -101713,8 +101812,32 @@ var _createStyles = _interopRequireDefault(require("@material-ui/styles/createSt
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var useStyles = (0, _makeStyles.default)(function (theme) {
-  var _a, _b, _c;
+  return (0, _createStyles.default)({
+    tableWrapper: {
+      display: 'flex',
+      flexDirection: 'column-reverse',
+      width: '100%',
+      maxWidth: 900
+    }
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/technologyPage/table/row/row.styles.tsx":[function(require,module,exports) {
+"use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
   return (0, _createStyles.default)({
     rowWraper: {
       display: 'flex',
@@ -101728,8 +101851,34 @@ var useStyles = (0, _makeStyles.default)(function (theme) {
       display: 'flex',
       flexDirection: 'column',
       marginRight: 30
+    }
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/technologyPage/table/row/rowElement/rowElement.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  var _a, _b;
+
+  return (0, _createStyles.default)({
+    textWrapper: {
+      display: 'flex',
+      alignItems: 'center'
     },
-    leftContainerText: (_a = {
+    text: (_a = {
       display: 'flex',
       alignItems: 'center',
       color: theme.customPalette.lightBlue,
@@ -101739,7 +101888,7 @@ var useStyles = (0, _makeStyles.default)(function (theme) {
       fontSize: 14,
       lineHeight: 1
     }, _a),
-    leftContainerTextAnswer: (_b = {
+    answer: (_b = {
       color: theme.customPalette.lightOrange,
       marginLeft: 3,
       fontSize: 18,
@@ -101747,29 +101896,12 @@ var useStyles = (0, _makeStyles.default)(function (theme) {
     }, _b[theme.breakpoints.down('sm')] = {
       fontSize: 14,
       lineHeight: 1
-    }, _b),
-    tableWrapper: {
-      display: 'flex',
-      flexDirection: 'column',
-      width: '100%',
-      maxWidth: 900
-    },
-    deleteButton: (_c = {
-      width: 200,
-      backgroundColor: theme.customPalette.red,
-      '&:hover': {
-        backgroundColor: theme.customPalette.darkRed,
-        transition: 'all .4s ease'
-      }
-    }, _c[theme.breakpoints.down('sm')] = {
-      width: 100,
-      fontSize: 16
-    }, _c)
+    }, _b)
   });
 });
 var _default = useStyles;
 exports.default = _default;
-},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/technologyPage/table/row.tsx":[function(require,module,exports) {
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/technologyPage/table/row/rowElement/rowElement.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -101779,9 +101911,66 @@ exports.default = void 0;
 
 var React = _interopRequireWildcard(require("react"));
 
-var _table = _interopRequireDefault(require("./table.style"));
+var _rowElement = _interopRequireDefault(require("./rowElement.styles"));
 
 var _core = require("@material-ui/core");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var RowElement = function RowElement(_a) {
+  var text = _a.text,
+      answer = _a.answer,
+      isAnswer = _a.isAnswer,
+      response = _a.response;
+  var classes = (0, _rowElement.default)();
+  return React.createElement("div", {
+    className: classes.textWrapper
+  }, isAnswer !== '' && isAnswer !== null ? React.createElement(React.Fragment, null, React.createElement(_core.Typography, {
+    className: classes.text
+  }, text), React.createElement(_core.Typography, {
+    className: classes.answer
+  }, answer)) : React.createElement(_core.Typography, {
+    className: classes.text
+  }, response));
+};
+
+var _default = RowElement;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./rowElement.styles":"src/componets/technologyPage/table/row/rowElement/rowElement.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/technologyPage/table/row/rowElement/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () {
+    return _rowElement.default;
+  }
+});
+
+var _rowElement = _interopRequireDefault(require("./rowElement"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./rowElement":"src/componets/technologyPage/table/row/rowElement/rowElement.tsx"}],"src/componets/technologyPage/table/row/row.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _row = _interopRequireDefault(require("./row.styles"));
+
+var _rowElement = _interopRequireDefault(require("./rowElement"));
+
+var _buttons = require("../../../baseComponents/buttons");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -101796,45 +101985,36 @@ var Row = function Row(_a) {
       description = _a.description,
       initRelease = _a.initRelease,
       onDelete = _a.onDelete;
-  var classes = (0, _table.default)();
-  var handleDelete = React.useCallback(function (event) {
-    onDelete(_id);
-  }, [onDelete, _id]);
-  return (//TODO it has to be refactored .... change to one base component
-    React.createElement("div", {
-      className: classes.rowWraper
-    }, React.createElement("div", {
-      className: classes.leftContainer
-    }, React.createElement(_core.Typography, {
-      className: classes.leftContainerText
-    }, "Name of technology:"), React.createElement(_core.Typography, {
-      className: classes.leftContainerTextAnswer
-    }, name), React.createElement(_core.Typography, {
-      className: classes.leftContainerText
-    }, "Name of the programming language:"), React.createElement(_core.Typography, {
-      className: classes.leftContainerTextAnswer
-    }, language), description ? React.createElement(React.Fragment, null, React.createElement(_core.Typography, {
-      className: classes.leftContainerText
-    }, "Description:"), React.createElement(_core.Typography, {
-      className: classes.leftContainerTextAnswer
-    }, description)) : React.createElement(_core.Typography, {
-      className: classes.leftContainerText
-    }, "User did not provide a description."), initRelease ? React.createElement(React.Fragment, null, React.createElement(_core.Typography, {
-      className: classes.leftContainerText
-    }, "The year of publishment:"), React.createElement(_core.Typography, {
-      className: classes.leftContainerTextAnswer
-    }, initRelease)) : React.createElement(_core.Typography, {
-      className: classes.leftContainerText
-    }, "Release date of the technology was not given ", name)), React.createElement(_core.Button, {
-      onClick: handleDelete,
-      className: classes.deleteButton
-    }, "Delete"))
-  );
+  var classes = (0, _row.default)();
+  return React.createElement("div", {
+    className: classes.rowWraper
+  }, React.createElement("div", {
+    className: classes.leftContainer
+  }, React.createElement(_rowElement.default, {
+    text: "Name of technology:",
+    answer: name
+  }), React.createElement(_rowElement.default, {
+    text: "Name of the programming language:",
+    answer: language
+  }), React.createElement(_rowElement.default, {
+    text: "Description:",
+    answer: description,
+    isAnswer: description,
+    response: "User did not provide a description."
+  }), React.createElement(_rowElement.default, {
+    text: "The year of publishment:",
+    answer: initRelease,
+    isAnswer: initRelease,
+    response: "Release date of the technology was not given for " + name
+  })), React.createElement(_buttons.DeleteButton, {
+    onDelete: onDelete,
+    _id: _id
+  }));
 };
 
 var _default = Row;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./table.style":"src/componets/technologyPage/table/table.style.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/technologyPage/table/table.tsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./row.styles":"src/componets/technologyPage/table/row/row.styles.tsx","./rowElement":"src/componets/technologyPage/table/row/rowElement/index.ts","../../../baseComponents/buttons":"src/componets/baseComponents/buttons/index.ts"}],"src/componets/technologyPage/table/table.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -101846,7 +102026,7 @@ var React = _interopRequireWildcard(require("react"));
 
 var _table = _interopRequireDefault(require("./table.style"));
 
-var _row = _interopRequireDefault(require("./row"));
+var _row = _interopRequireDefault(require("./row/row"));
 
 var _core = require("@material-ui/core");
 
@@ -101870,24 +102050,24 @@ var Table = function Table(_a) {
         initRelease = _a.initRelease;
     return React.createElement("div", {
       key: _id
-    }, React.createElement(_core.Divider, {
-      style: {
-        backgroundColor: 'white'
-      }
-    }), React.createElement(_row.default, {
+    }, React.createElement(_row.default, {
       onDelete: onDelete,
       _id: _id,
       name: name,
       language: language,
       description: description,
       initRelease: initRelease
+    }), React.createElement(_core.Divider, {
+      style: {
+        backgroundColor: 'white'
+      }
     }));
   }));
 };
 
 var _default = Table;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./table.style":"src/componets/technologyPage/table/table.style.tsx","./row":"src/componets/technologyPage/table/row.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/technologyPage/table/index.ts":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./table.style":"src/componets/technologyPage/table/table.style.tsx","./row/row":"src/componets/technologyPage/table/row/row.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/technologyPage/table/index.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -102293,10 +102473,11 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+var title = '// Butler';
+var buttonText = 'Go To The Home Page';
+
 var Technology = function Technology() {
   var classes = (0, _technology.default)();
-  var title = '// Butler';
-  var buttonText = 'Go To The Home Page';
 
   var _a = (0, _useTechnology.useTechnology)(),
       technologies = _a.technologies,

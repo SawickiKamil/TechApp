@@ -6,10 +6,12 @@ import Table from './table';
 import CustomCircularProgress from '../baseComponents/costomCircularProgress';
 import { useTechnology } from '../../hooks/useTechnology';
 
+const title = '// Butler';
+const buttonText = 'Go To The Home Page';
+
 const Technology = () => {
   const classes = useStyles();
-  const title = '// Butler';
-  const buttonText = 'Go To The Home Page';
+
   const {
     technologies,
     loadingPage,
