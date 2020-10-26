@@ -1,6 +1,8 @@
 # TechApp
 TechAPP - React, Node &amp; MongoDB
 
+TechApp is built like a todo list. It was created for the purpose of better understanding of Back-End.
+
 ### Front-End Tech
 
 - [React.js] - hooks!
