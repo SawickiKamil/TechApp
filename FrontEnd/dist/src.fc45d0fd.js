@@ -83965,8 +83965,6 @@ var _createStyles = _interopRequireDefault(require("@material-ui/styles/createSt
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var useStyles = (0, _makeStyles.default)(function (theme) {
-  var _a, _b;
-
   return (0, _createStyles.default)({
     mainWrapper: {
       display: 'flex',
@@ -83975,41 +83973,6 @@ var useStyles = (0, _makeStyles.default)(function (theme) {
       minHeight: '100%',
       width: '100%'
     },
-    headerWrapper: {
-      display: 'flex',
-      alignItems: 'center',
-      flexDirection: 'column',
-      width: '100%',
-      flex: '0 0 40px'
-    },
-    footerWrapper: {
-      display: 'flex',
-      flex: '0 0 40px',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'rgba(30,30,30,.95)'
-    },
-    footerLinkStyle: (_a = {
-      color: theme.customPalette.todoOrange,
-      fontSize: 14
-    }, _a[theme.breakpoints.down('sm')] = {
-      fontSize: 11
-    }, _a),
-    titleStyle: (_b = {
-      color: theme.customPalette.darkGreen,
-      display: 'flex',
-      width: '100%',
-      height: 90,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'rgba(30,30,30,.95)'
-    }, _b[theme.breakpoints.down('sm')] = {
-      fontSize: '40px !important',
-      height: 80
-    }, _b[theme.breakpoints.down('xs')] = {
-      fontSize: 25,
-      height: 60
-    }, _b),
     sectionWrapper: {
       flex: '1 1 auto',
       padding: '20px 30px',
@@ -84442,7 +84405,7 @@ var FRONT_END = ['React.js', 'React-Router', 'TypeScript', 'JSS', 'Material-UI',
 exports.FRONT_END = FRONT_END;
 var BACK_END = ['JS', ' Node.js', 'Express', 'MongoDB', 'Mongosse'];
 exports.BACK_END = BACK_END;
-var FrontEndDescription = "I created a small 'theme' in accordance with the Material-UI assumptions and styled the elements that I use in the project globally. Everything is based on 'JSS' and hooked up to components. Additionally, I added responsiveness for mobile devices.";
+var FrontEndDescription = "I created a small 'theme' in accordance with the Material-UI assumptions and styled the elements that I use in the project globally. Everything is based on 'JSS' and hooked up to components. Additionally, responsiveness has been added for mobile devices.";
 exports.FrontEndDescription = FrontEndDescription;
 var BackEndDescription = 'Bakend is based on Node.js and Express.js. I used MongoDB and Mongosse as a database and used the Postman application for query testing.';
 exports.BackEndDescription = BackEndDescription;
@@ -84560,66 +84523,25 @@ var _createStyles = _interopRequireDefault(require("@material-ui/styles/createSt
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var useStyles = (0, _makeStyles.default)(function (theme) {
-  var _a, _b;
+  var _a;
 
   return (0, _createStyles.default)({
-    modalButtonStyle: (_a = {
-      width: '100%',
-      height: 70,
-      borderRadius: 3,
-      border: "solid 2px " + theme.customPalette.lightPink,
-      boxShadow: '0 16px 27px -10px rgba(0, 0, 0, 0.79), 0 0 24px 0 rgba(255, 180, 141, 0.23)',
-      backgroundColor: 'transparent',
-      textTransform: 'capitalize',
-      marginBottom: 20,
-      color: theme.customPalette.lightPink,
-      fontSize: 18
-    }, _a[theme.breakpoints.up('sm')] = {
-      width: 450,
-      height: 80,
-      marginBottom: 30
-    }, _a['&:hover'] = {
-      opacity: 0.8,
-      textDecoration: 'none',
-      transition: 'all .4s ease'
-    }, _a),
     dialogWrapper: {
       backgroundColor: theme.customPalette.lightTuna,
       display: 'flex',
       flexDirection: 'column'
     },
-    dialogTitleStyle: (_b = {
+    dialogTitleStyle: (_a = {
       padding: 20,
       margin: '0 30px',
       fontWeight: 'bold',
       fontSize: 22,
       textAlign: 'center',
       color: theme.customPalette.white
-    }, _b[theme.breakpoints.down('sm')] = {
+    }, _a[theme.breakpoints.down('sm')] = {
       padding: 10,
       fontSize: 18
-    }, _b),
-    textFieldsWrapper: {
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-      padding: '0 10px'
-    },
-    textFieldStyle: {
-      width: '100%',
-      marginTop: '20'
-    },
-    addNewButton: {
-      marginTop: 30,
-      backgroundColor: theme.customPalette.green,
-      borderRadius: 0,
-      color: theme.customPalette.white,
-      fontWeight: 'bold',
-      '&:hover': {
-        backgroundColor: theme.customPalette.lightBlue
-      }
-    }
+    }, _a)
   });
 });
 var _default = useStyles;
@@ -98763,305 +98685,7 @@ var FastFieldInner = /*#__PURE__*/function (_React$Component) {
 
 var FastField = /*#__PURE__*/connect(FastFieldInner);
 exports.FastField = FastField;
-},{"react":"node_modules/react/index.js","react-fast-compare":"node_modules/react-fast-compare/index.js","deepmerge":"node_modules/deepmerge/dist/es.js","lodash-es/isPlainObject":"node_modules/lodash-es/isPlainObject.js","lodash-es/clone":"node_modules/lodash-es/clone.js","lodash-es/toPath":"node_modules/lodash-es/toPath.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","scheduler":"node_modules/scheduler/index.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","lodash-es/cloneDeep":"node_modules/lodash-es/cloneDeep.js"}],"node_modules/formik-material-ui/dist/formik-material-ui.es6.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.fieldToTextField = fieldToTextField;
-exports.TextField = TextField;
-exports.fieldToSwitch = fieldToSwitch;
-exports.Switch = Switch;
-exports.fieldToCheckbox = fieldToCheckbox;
-exports.Checkbox = Checkbox;
-exports.CheckboxWithLabel = CheckboxWithLabel;
-exports.fieldToSelect = fieldToSelect;
-exports.Select = Select;
-exports.fieldToRadioGroup = fieldToRadioGroup;
-exports.RadioGroup = RadioGroup;
-exports.fieldToInputBase = fieldToInputBase;
-exports.InputBase = InputBase;
-exports.SimpleFileUpload = void 0;
-
-var _TextField = _interopRequireDefault(require("@material-ui/core/TextField"));
-
-var _Switch = _interopRequireDefault(require("@material-ui/core/Switch"));
-
-var _tinyWarning = _interopRequireDefault(require("tiny-warning"));
-
-var _Checkbox = _interopRequireDefault(require("@material-ui/core/Checkbox"));
-
-var _FormControlLabel = _interopRequireDefault(require("@material-ui/core/FormControlLabel"));
-
-var _Select = _interopRequireDefault(require("@material-ui/core/Select"));
-
-var _formik = require("formik");
-
-var _FormControl = _interopRequireDefault(require("@material-ui/core/FormControl"));
-
-var _InputLabel = _interopRequireDefault(require("@material-ui/core/InputLabel"));
-
-var _Input = _interopRequireDefault(require("@material-ui/core/Input"));
-
-var _FormHelperText = _interopRequireDefault(require("@material-ui/core/FormHelperText"));
-
-var _RadioGroup = _interopRequireDefault(require("@material-ui/core/RadioGroup"));
-
-var _react = require("react");
-
-var _InputBase = _interopRequireDefault(require("@material-ui/core/InputBase"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-var __assign = function () {
-  __assign = Object.assign || function __assign(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-      s = arguments[i];
-
-      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-    }
-
-    return t;
-  };
-
-  return __assign.apply(this, arguments);
-};
-
-function __rest(s, e) {
-  var t = {};
-
-  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
-  return t;
-}
-
-function fieldToTextField(_a) {
-  var disabled = _a.disabled,
-      _b = _a.field,
-      fieldOnBlur = _b.onBlur,
-      field = __rest(_b, ["onBlur"]),
-      _c = _a.form,
-      isSubmitting = _c.isSubmitting,
-      touched = _c.touched,
-      errors = _c.errors,
-      onBlur = _a.onBlur,
-      helperText = _a.helperText,
-      props = __rest(_a, ["disabled", "field", "form", "onBlur", "helperText"]);
-
-  var fieldError = (0, _formik.getIn)(errors, field.name);
-  var showError = (0, _formik.getIn)(touched, field.name) && !!fieldError;
-  return __assign(__assign({
-    variant: props.variant,
-    error: showError,
-    helperText: showError ? fieldError : helperText,
-    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
-    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
-      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
-    }
-  }, field), props);
-}
-
-function TextField(_a) {
-  var children = _a.children,
-      props = __rest(_a, ["children"]);
-
-  return (0, _react.createElement)(_TextField.default, __assign({}, fieldToTextField(props)), children);
-}
-
-TextField.displayName = 'FormikMaterialUITextField';
-
-function fieldToSwitch(_a) {
-  var disabled = _a.disabled,
-      _b = _a.field,
-      fieldOnBlur = _b.onBlur,
-      field = __rest(_b, ["onBlur"]),
-      isSubmitting = _a.form.isSubmitting,
-      type = _a.type,
-      onBlur = _a.onBlur,
-      props = __rest(_a, ["disabled", "field", "form", "type", "onBlur"]);
-
-  if ("development" !== 'production') {
-    (0, _tinyWarning.default)(type === 'checkbox', "property type=checkbox is missing from field " + field.name + ", this can caused unexpected behaviour");
-  }
-
-  return __assign(__assign({
-    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
-    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
-      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
-    }
-  }, field), props);
-}
-
-function Switch(props) {
-  return (0, _react.createElement)(_Switch.default, __assign({}, fieldToSwitch(props)));
-}
-
-Switch.displayName = 'FormikMaterialUISwitch';
-
-function fieldToCheckbox(_a) {
-  var disabled = _a.disabled,
-      _b = _a.field,
-      fieldOnBlur = _b.onBlur,
-      field = __rest(_b, ["onBlur"]),
-      isSubmitting = _a.form.isSubmitting,
-      type = _a.type,
-      onBlur = _a.onBlur,
-      props = __rest(_a, ["disabled", "field", "form", "type", "onBlur"]);
-
-  var indeterminate = !Array.isArray(field.value) && field.value == null;
-
-  if ("development" !== 'production') {
-    (0, _tinyWarning.default)(type === 'checkbox', "property type=checkbox is missing from field " + field.name + ", this can caused unexpected behaviour");
-  }
-
-  return __assign(__assign({
-    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
-    indeterminate: indeterminate,
-    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
-      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
-    }
-  }, field), props);
-}
-
-function Checkbox(props) {
-  return (0, _react.createElement)(_Checkbox.default, __assign({}, fieldToCheckbox(props)));
-}
-
-Checkbox.displayName = 'FormikMaterialUICheckbox';
-
-function CheckboxWithLabel(_a) {
-  var Label = _a.Label,
-      props = __rest(_a, ["Label"]);
-
-  return (0, _react.createElement)(_FormControlLabel.default, __assign({
-    control: (0, _react.createElement)(_Checkbox.default, __assign({}, fieldToCheckbox(props)))
-  }, Label));
-}
-
-CheckboxWithLabel.displayName = 'FormikMaterialUICheckboxWithLabel';
-
-function fieldToSelect(_a) {
-  var disabled = _a.disabled,
-      _b = _a.field,
-      fieldOnBlur = _b.onBlur,
-      field = __rest(_b, ["onBlur"]),
-      isSubmitting = _a.form.isSubmitting,
-      onBlur = _a.onBlur,
-      props = __rest(_a, ["disabled", "field", "form", "onBlur"]);
-
-  return __assign(__assign({
-    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
-    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
-      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
-    }
-  }, field), props);
-}
-
-function Select(props) {
-  return (0, _react.createElement)(_Select.default, __assign({}, fieldToSelect(props)));
-}
-
-Select.displayName = 'FormikMaterialUISelect';
-
-var SimpleFileUpload = function (_a) {
-  var field = _a.field,
-      _b = _a.form,
-      isSubmitting = _b.isSubmitting,
-      touched = _b.touched,
-      errors = _b.errors,
-      setFieldValue = _b.setFieldValue,
-      label = _a.label,
-      _c = _a.disabled,
-      disabled = _c === void 0 ? false : _c,
-      inputProps = _a.InputProps,
-      inputLabelProps = _a.InputLabelProps,
-      formControlProps = _a.FormControlProps;
-  var error = (0, _formik.getIn)(touched, field.name) && (0, _formik.getIn)(errors, field.name);
-  return (0, _react.createElement)(_FormControl.default, __assign({}, formControlProps), label && (0, _react.createElement)(_InputLabel.default, __assign({
-    shrink: true,
-    error: !!error
-  }, inputLabelProps), label), (0, _react.createElement)(_Input.default, __assign({
-    error: !!error,
-    inputProps: {
-      type: 'file',
-      disabled: disabled || isSubmitting,
-      name: field.name,
-      onChange: function (event) {
-        if (inputProps === null || inputProps === void 0 ? void 0 : inputProps.onChange) {
-          inputProps.onChange(event);
-        } else {
-          var file = event.currentTarget.files[0];
-          setFieldValue(field.name, file);
-        }
-      }
-    }
-  }, inputProps)), error && (0, _react.createElement)(_FormHelperText.default, {
-    error: true
-  }, error));
-};
-
-exports.SimpleFileUpload = SimpleFileUpload;
-
-function fieldToRadioGroup(_a) {
-  var _b = _a.field,
-      fieldOnBlur = _b.onBlur,
-      field = __rest(_b, ["onBlur"]),
-      form = _a.form,
-      onBlur = _a.onBlur,
-      props = __rest(_a, ["field", "form", "onBlur"]);
-
-  return __assign(__assign({
-    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
-      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
-    }
-  }, field), props);
-}
-
-function RadioGroup(props) {
-  return (0, _react.createElement)(_RadioGroup.default, __assign({}, fieldToRadioGroup(props)));
-}
-
-RadioGroup.displayName = 'FormikMaterialUIRadioGroup';
-
-function fieldToInputBase(_a) {
-  var disabled = _a.disabled,
-      _b = _a.field,
-      fieldOnBlur = _b.onBlur,
-      field = __rest(_b, ["onBlur"]),
-      isSubmitting = _a.form.isSubmitting,
-      onBlur = _a.onBlur,
-      props = __rest(_a, ["disabled", "field", "form", "onBlur"]);
-
-  return __assign(__assign({
-    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
-    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
-      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
-    }
-  }, field), props);
-}
-
-function InputBase(props) {
-  return (0, _react.createElement)(_InputBase.default, __assign({}, fieldToInputBase(props)));
-}
-
-InputBase.displayName = 'FormikMaterialUIInputBase';
-},{"@material-ui/core/TextField":"node_modules/@material-ui/core/esm/TextField/index.js","@material-ui/core/Switch":"node_modules/@material-ui/core/esm/Switch/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@material-ui/core/Checkbox":"node_modules/@material-ui/core/esm/Checkbox/index.js","@material-ui/core/FormControlLabel":"node_modules/@material-ui/core/esm/FormControlLabel/index.js","@material-ui/core/Select":"node_modules/@material-ui/core/esm/Select/index.js","formik":"node_modules/formik/dist/formik.esm.js","@material-ui/core/FormControl":"node_modules/@material-ui/core/esm/FormControl/index.js","@material-ui/core/InputLabel":"node_modules/@material-ui/core/esm/InputLabel/index.js","@material-ui/core/Input":"node_modules/@material-ui/core/esm/Input/index.js","@material-ui/core/FormHelperText":"node_modules/@material-ui/core/esm/FormHelperText/index.js","@material-ui/core/RadioGroup":"node_modules/@material-ui/core/esm/RadioGroup/index.js","react":"node_modules/react/index.js","@material-ui/core/InputBase":"node_modules/@material-ui/core/esm/InputBase/index.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-fast-compare":"node_modules/react-fast-compare/index.js","deepmerge":"node_modules/deepmerge/dist/es.js","lodash-es/isPlainObject":"node_modules/lodash-es/isPlainObject.js","lodash-es/clone":"node_modules/lodash-es/clone.js","lodash-es/toPath":"node_modules/lodash-es/toPath.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","scheduler":"node_modules/scheduler/index.js","hoist-non-react-statics":"node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js","lodash-es/cloneDeep":"node_modules/lodash-es/cloneDeep.js"}],"node_modules/axios/lib/helpers/bind.js":[function(require,module,exports) {
 'use strict';
 
 module.exports = function bind(fn, thisArg) {
@@ -101275,7 +100899,725 @@ function useModal(onTechCreated) {
     onSubmit: onSubmit
   };
 }
-},{"react":"node_modules/react/index.js","../api/fetchApi":"src/api/fetchApi.ts"}],"src/componets/technologyPage/modal/modal.tsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../api/fetchApi":"src/api/fetchApi.ts"}],"src/componets/technologyPage/modal/fields/fiels.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  return (0, _createStyles.default)({
+    textFieldsWrapper: {
+      width: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '0 10px'
+    }
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/formikField/field.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  return (0, _createStyles.default)({
+    textFieldStyle: {
+      width: '100%',
+      marginTop: '20'
+    }
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"node_modules/formik-material-ui/dist/formik-material-ui.es6.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.fieldToTextField = fieldToTextField;
+exports.TextField = TextField;
+exports.fieldToSwitch = fieldToSwitch;
+exports.Switch = Switch;
+exports.fieldToCheckbox = fieldToCheckbox;
+exports.Checkbox = Checkbox;
+exports.CheckboxWithLabel = CheckboxWithLabel;
+exports.fieldToSelect = fieldToSelect;
+exports.Select = Select;
+exports.fieldToRadioGroup = fieldToRadioGroup;
+exports.RadioGroup = RadioGroup;
+exports.fieldToInputBase = fieldToInputBase;
+exports.InputBase = InputBase;
+exports.SimpleFileUpload = void 0;
+
+var _TextField = _interopRequireDefault(require("@material-ui/core/TextField"));
+
+var _Switch = _interopRequireDefault(require("@material-ui/core/Switch"));
+
+var _tinyWarning = _interopRequireDefault(require("tiny-warning"));
+
+var _Checkbox = _interopRequireDefault(require("@material-ui/core/Checkbox"));
+
+var _FormControlLabel = _interopRequireDefault(require("@material-ui/core/FormControlLabel"));
+
+var _Select = _interopRequireDefault(require("@material-ui/core/Select"));
+
+var _formik = require("formik");
+
+var _FormControl = _interopRequireDefault(require("@material-ui/core/FormControl"));
+
+var _InputLabel = _interopRequireDefault(require("@material-ui/core/InputLabel"));
+
+var _Input = _interopRequireDefault(require("@material-ui/core/Input"));
+
+var _FormHelperText = _interopRequireDefault(require("@material-ui/core/FormHelperText"));
+
+var _RadioGroup = _interopRequireDefault(require("@material-ui/core/RadioGroup"));
+
+var _react = require("react");
+
+var _InputBase = _interopRequireDefault(require("@material-ui/core/InputBase"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+var __assign = function () {
+  __assign = Object.assign || function __assign(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+
+    return t;
+  };
+
+  return __assign.apply(this, arguments);
+};
+
+function __rest(s, e) {
+  var t = {};
+
+  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0) t[p[i]] = s[p[i]];
+  return t;
+}
+
+function fieldToTextField(_a) {
+  var disabled = _a.disabled,
+      _b = _a.field,
+      fieldOnBlur = _b.onBlur,
+      field = __rest(_b, ["onBlur"]),
+      _c = _a.form,
+      isSubmitting = _c.isSubmitting,
+      touched = _c.touched,
+      errors = _c.errors,
+      onBlur = _a.onBlur,
+      helperText = _a.helperText,
+      props = __rest(_a, ["disabled", "field", "form", "onBlur", "helperText"]);
+
+  var fieldError = (0, _formik.getIn)(errors, field.name);
+  var showError = (0, _formik.getIn)(touched, field.name) && !!fieldError;
+  return __assign(__assign({
+    variant: props.variant,
+    error: showError,
+    helperText: showError ? fieldError : helperText,
+    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
+    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
+      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
+    }
+  }, field), props);
+}
+
+function TextField(_a) {
+  var children = _a.children,
+      props = __rest(_a, ["children"]);
+
+  return (0, _react.createElement)(_TextField.default, __assign({}, fieldToTextField(props)), children);
+}
+
+TextField.displayName = 'FormikMaterialUITextField';
+
+function fieldToSwitch(_a) {
+  var disabled = _a.disabled,
+      _b = _a.field,
+      fieldOnBlur = _b.onBlur,
+      field = __rest(_b, ["onBlur"]),
+      isSubmitting = _a.form.isSubmitting,
+      type = _a.type,
+      onBlur = _a.onBlur,
+      props = __rest(_a, ["disabled", "field", "form", "type", "onBlur"]);
+
+  if ("development" !== 'production') {
+    (0, _tinyWarning.default)(type === 'checkbox', "property type=checkbox is missing from field " + field.name + ", this can caused unexpected behaviour");
+  }
+
+  return __assign(__assign({
+    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
+    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
+      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
+    }
+  }, field), props);
+}
+
+function Switch(props) {
+  return (0, _react.createElement)(_Switch.default, __assign({}, fieldToSwitch(props)));
+}
+
+Switch.displayName = 'FormikMaterialUISwitch';
+
+function fieldToCheckbox(_a) {
+  var disabled = _a.disabled,
+      _b = _a.field,
+      fieldOnBlur = _b.onBlur,
+      field = __rest(_b, ["onBlur"]),
+      isSubmitting = _a.form.isSubmitting,
+      type = _a.type,
+      onBlur = _a.onBlur,
+      props = __rest(_a, ["disabled", "field", "form", "type", "onBlur"]);
+
+  var indeterminate = !Array.isArray(field.value) && field.value == null;
+
+  if ("development" !== 'production') {
+    (0, _tinyWarning.default)(type === 'checkbox', "property type=checkbox is missing from field " + field.name + ", this can caused unexpected behaviour");
+  }
+
+  return __assign(__assign({
+    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
+    indeterminate: indeterminate,
+    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
+      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
+    }
+  }, field), props);
+}
+
+function Checkbox(props) {
+  return (0, _react.createElement)(_Checkbox.default, __assign({}, fieldToCheckbox(props)));
+}
+
+Checkbox.displayName = 'FormikMaterialUICheckbox';
+
+function CheckboxWithLabel(_a) {
+  var Label = _a.Label,
+      props = __rest(_a, ["Label"]);
+
+  return (0, _react.createElement)(_FormControlLabel.default, __assign({
+    control: (0, _react.createElement)(_Checkbox.default, __assign({}, fieldToCheckbox(props)))
+  }, Label));
+}
+
+CheckboxWithLabel.displayName = 'FormikMaterialUICheckboxWithLabel';
+
+function fieldToSelect(_a) {
+  var disabled = _a.disabled,
+      _b = _a.field,
+      fieldOnBlur = _b.onBlur,
+      field = __rest(_b, ["onBlur"]),
+      isSubmitting = _a.form.isSubmitting,
+      onBlur = _a.onBlur,
+      props = __rest(_a, ["disabled", "field", "form", "onBlur"]);
+
+  return __assign(__assign({
+    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
+    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
+      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
+    }
+  }, field), props);
+}
+
+function Select(props) {
+  return (0, _react.createElement)(_Select.default, __assign({}, fieldToSelect(props)));
+}
+
+Select.displayName = 'FormikMaterialUISelect';
+
+var SimpleFileUpload = function (_a) {
+  var field = _a.field,
+      _b = _a.form,
+      isSubmitting = _b.isSubmitting,
+      touched = _b.touched,
+      errors = _b.errors,
+      setFieldValue = _b.setFieldValue,
+      label = _a.label,
+      _c = _a.disabled,
+      disabled = _c === void 0 ? false : _c,
+      inputProps = _a.InputProps,
+      inputLabelProps = _a.InputLabelProps,
+      formControlProps = _a.FormControlProps;
+  var error = (0, _formik.getIn)(touched, field.name) && (0, _formik.getIn)(errors, field.name);
+  return (0, _react.createElement)(_FormControl.default, __assign({}, formControlProps), label && (0, _react.createElement)(_InputLabel.default, __assign({
+    shrink: true,
+    error: !!error
+  }, inputLabelProps), label), (0, _react.createElement)(_Input.default, __assign({
+    error: !!error,
+    inputProps: {
+      type: 'file',
+      disabled: disabled || isSubmitting,
+      name: field.name,
+      onChange: function (event) {
+        if (inputProps === null || inputProps === void 0 ? void 0 : inputProps.onChange) {
+          inputProps.onChange(event);
+        } else {
+          var file = event.currentTarget.files[0];
+          setFieldValue(field.name, file);
+        }
+      }
+    }
+  }, inputProps)), error && (0, _react.createElement)(_FormHelperText.default, {
+    error: true
+  }, error));
+};
+
+exports.SimpleFileUpload = SimpleFileUpload;
+
+function fieldToRadioGroup(_a) {
+  var _b = _a.field,
+      fieldOnBlur = _b.onBlur,
+      field = __rest(_b, ["onBlur"]),
+      form = _a.form,
+      onBlur = _a.onBlur,
+      props = __rest(_a, ["field", "form", "onBlur"]);
+
+  return __assign(__assign({
+    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
+      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
+    }
+  }, field), props);
+}
+
+function RadioGroup(props) {
+  return (0, _react.createElement)(_RadioGroup.default, __assign({}, fieldToRadioGroup(props)));
+}
+
+RadioGroup.displayName = 'FormikMaterialUIRadioGroup';
+
+function fieldToInputBase(_a) {
+  var disabled = _a.disabled,
+      _b = _a.field,
+      fieldOnBlur = _b.onBlur,
+      field = __rest(_b, ["onBlur"]),
+      isSubmitting = _a.form.isSubmitting,
+      onBlur = _a.onBlur,
+      props = __rest(_a, ["disabled", "field", "form", "onBlur"]);
+
+  return __assign(__assign({
+    disabled: disabled !== null && disabled !== void 0 ? disabled : isSubmitting,
+    onBlur: onBlur !== null && onBlur !== void 0 ? onBlur : function (e) {
+      fieldOnBlur(e !== null && e !== void 0 ? e : field.name);
+    }
+  }, field), props);
+}
+
+function InputBase(props) {
+  return (0, _react.createElement)(_InputBase.default, __assign({}, fieldToInputBase(props)));
+}
+
+InputBase.displayName = 'FormikMaterialUIInputBase';
+},{"@material-ui/core/TextField":"node_modules/@material-ui/core/esm/TextField/index.js","@material-ui/core/Switch":"node_modules/@material-ui/core/esm/Switch/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@material-ui/core/Checkbox":"node_modules/@material-ui/core/esm/Checkbox/index.js","@material-ui/core/FormControlLabel":"node_modules/@material-ui/core/esm/FormControlLabel/index.js","@material-ui/core/Select":"node_modules/@material-ui/core/esm/Select/index.js","formik":"node_modules/formik/dist/formik.esm.js","@material-ui/core/FormControl":"node_modules/@material-ui/core/esm/FormControl/index.js","@material-ui/core/InputLabel":"node_modules/@material-ui/core/esm/InputLabel/index.js","@material-ui/core/Input":"node_modules/@material-ui/core/esm/Input/index.js","@material-ui/core/FormHelperText":"node_modules/@material-ui/core/esm/FormHelperText/index.js","@material-ui/core/RadioGroup":"node_modules/@material-ui/core/esm/RadioGroup/index.js","react":"node_modules/react/index.js","@material-ui/core/InputBase":"node_modules/@material-ui/core/esm/InputBase/index.js"}],"src/componets/baseComponents/formikField/field.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _field = _interopRequireDefault(require("./field.styles"));
+
+var _formik = require("formik");
+
+var _formikMaterialUi = require("formik-material-ui");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var FormikField = function FormikField(_a) {
+  var name = _a.name,
+      label = _a.label,
+      type = _a.type;
+  var classes = (0, _field.default)();
+  return React.createElement(React.Fragment, null, React.createElement(_formik.Field, {
+    className: classes.textFieldStyle,
+    variant: "outlined",
+    name: name,
+    component: _formikMaterialUi.TextField,
+    label: label,
+    type: type
+  }));
+};
+
+var _default = FormikField;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./field.styles":"src/componets/baseComponents/formikField/field.styles.tsx","formik":"node_modules/formik/dist/formik.esm.js","formik-material-ui":"node_modules/formik-material-ui/dist/formik-material-ui.es6.js"}],"src/componets/baseComponents/formikField/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () {
+    return _field.default;
+  }
+});
+
+var _field = _interopRequireDefault(require("./field"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./field":"src/componets/baseComponents/formikField/field.tsx"}],"src/componets/technologyPage/modal/fields/fields.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _fiels = _interopRequireDefault(require("./fiels.styles"));
+
+var _formikField = _interopRequireDefault(require("../../../baseComponents/formikField"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var Fields = function Fields() {
+  var classes = (0, _fiels.default)();
+  return React.createElement("div", {
+    className: classes.textFieldsWrapper
+  }, React.createElement(_formikField.default, {
+    name: "name",
+    label: "Enter the name of the technology."
+  }), React.createElement(_formikField.default, {
+    name: "language",
+    label: "Provide a programming language."
+  }), React.createElement(_formikField.default, {
+    name: "description",
+    label: "Add description."
+  }), React.createElement(_formikField.default, {
+    name: "initRelease",
+    label: "Enter the technology release year.",
+    type: "number"
+  }));
+};
+
+var _default = Fields;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./fiels.styles":"src/componets/technologyPage/modal/fields/fiels.styles.tsx","../../../baseComponents/formikField":"src/componets/baseComponents/formikField/index.ts"}],"src/componets/technologyPage/modal/fields/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () {
+    return _fields.default;
+  }
+});
+
+var _fields = _interopRequireDefault(require("./fields"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./fields":"src/componets/technologyPage/modal/fields/fields.tsx"}],"src/componets/baseComponents/buttons/formikButton/formikButton.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  return (0, _createStyles.default)({
+    addNewButton: {
+      marginTop: 30,
+      backgroundColor: theme.customPalette.green,
+      borderRadius: 0,
+      color: theme.customPalette.white,
+      fontWeight: 'bold',
+      '&:hover': {
+        backgroundColor: theme.customPalette.lightBlue
+      }
+    }
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/formikButton/formikButton.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FormikAddButton = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _formikButton = _interopRequireDefault(require("./formikButton.styles"));
+
+var _core = require("@material-ui/core");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var FormikAddButton = function FormikAddButton(_a) {
+  var disabled = _a.disabled;
+  var classes = (0, _formikButton.default)();
+  return React.createElement(_core.Button, {
+    className: classes.addNewButton,
+    disabled: disabled,
+    type: "submit"
+  }, "Add");
+};
+
+exports.FormikAddButton = FormikAddButton;
+},{"react":"node_modules/react/index.js","./formikButton.styles":"src/componets/baseComponents/buttons/formikButton/formikButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/formikButton/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _formikButton = require("./formikButton");
+
+Object.keys(_formikButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _formikButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _formikButton[key];
+    }
+  });
+});
+},{"./formikButton":"src/componets/baseComponents/buttons/formikButton/formikButton.tsx"}],"src/componets/baseComponents/buttons/addTechButton/addTechButton.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  var _a;
+
+  return (0, _createStyles.default)({
+    modalButtonStyle: (_a = {
+      width: '100%',
+      height: 70,
+      borderRadius: 3,
+      border: "solid 2px " + theme.customPalette.lightPink,
+      boxShadow: '0 16px 27px -10px rgba(0, 0, 0, 0.79), 0 0 24px 0 rgba(255, 180, 141, 0.23)',
+      backgroundColor: 'transparent',
+      textTransform: 'capitalize',
+      marginBottom: 20,
+      color: theme.customPalette.lightPink,
+      fontSize: 18
+    }, _a[theme.breakpoints.up('sm')] = {
+      width: 450,
+      height: 80,
+      marginBottom: 30
+    }, _a['&:hover'] = {
+      opacity: 0.8,
+      textDecoration: 'none',
+      transition: 'all .4s ease'
+    }, _a)
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/addTechButton/addTechButton.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.AddTechButton = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _addTechButton = _interopRequireDefault(require("./addTechButton.styles"));
+
+var _core = require("@material-ui/core");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var AddTechButton = function AddTechButton(_a) {
+  var handleClickOpen = _a.handleClickOpen;
+  var classes = (0, _addTechButton.default)();
+  return React.createElement(_core.Button, {
+    className: classes.modalButtonStyle,
+    onClick: handleClickOpen
+  }, "Add new technology");
+};
+
+exports.AddTechButton = AddTechButton;
+},{"react":"node_modules/react/index.js","./addTechButton.styles":"src/componets/baseComponents/buttons/addTechButton/addTechButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/addTechButton/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _addTechButton = require("./addTechButton");
+
+Object.keys(_addTechButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _addTechButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _addTechButton[key];
+    }
+  });
+});
+},{"./addTechButton":"src/componets/baseComponents/buttons/addTechButton/addTechButton.tsx"}],"src/componets/baseComponents/buttons/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _formikButton = require("./formikButton");
+
+Object.keys(_formikButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _formikButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _formikButton[key];
+    }
+  });
+});
+
+var _addTechButton = require("./addTechButton");
+
+Object.keys(_addTechButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _addTechButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _addTechButton[key];
+    }
+  });
+});
+},{"./formikButton":"src/componets/baseComponents/buttons/formikButton/index.ts","./addTechButton":"src/componets/baseComponents/buttons/addTechButton/index.ts"}],"src/componets/baseComponents/customDialog/customDialog.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _Dialog = _interopRequireDefault(require("@material-ui/core/Dialog"));
+
+var _theme = require("../../../theme");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var CustomDialog = function CustomDialog(_a) {
+  var children = _a.children,
+      onClose = _a.onClose,
+      open = _a.open;
+  return React.createElement(_Dialog.default, {
+    open: open,
+    onClose: onClose,
+    PaperProps: {
+      style: {
+        backgroundColor: _theme.theme.customPalette.tuna
+      }
+    }
+  }, children);
+};
+
+var _default = CustomDialog;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","@material-ui/core/Dialog":"node_modules/@material-ui/core/esm/Dialog/index.js","../../../theme":"src/theme/index.ts"}],"src/componets/baseComponents/customDialog/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "default", {
+  enumerable: true,
+  get: function () {
+    return _customDialog.default;
+  }
+});
+
+var _customDialog = _interopRequireDefault(require("./customDialog"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./customDialog":"src/componets/baseComponents/customDialog/customDialog.tsx"}],"src/componets/technologyPage/modal/modal.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -101287,21 +101629,19 @@ var React = _interopRequireWildcard(require("react"));
 
 var _modal = _interopRequireDefault(require("./modal.styles"));
 
-var _Button = _interopRequireDefault(require("@material-ui/core/Button"));
-
-var _Dialog = _interopRequireDefault(require("@material-ui/core/Dialog"));
-
 var _schema = require("./schema");
 
 var _formik = require("formik");
-
-var _formikMaterialUi = require("formik-material-ui");
 
 var _useModal = require("../../../hooks/useModal");
 
 var _core = require("@material-ui/core");
 
-var _theme = require("../../../theme");
+var _fields = _interopRequireDefault(require("./fields"));
+
+var _buttons = require("../../baseComponents/buttons");
+
+var _customDialog = _interopRequireDefault(require("../../baseComponents/customDialog"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -101319,17 +101659,11 @@ var CustomModal = function CustomModal(_a) {
       handleClose = _b.handleClose,
       onSubmit = _b.onSubmit;
 
-  return React.createElement(React.Fragment, null, React.createElement(_Button.default, {
-    className: classes.modalButtonStyle,
-    onClick: handleClickOpen
-  }, "Add new technology"), React.createElement(_Dialog.default, {
+  return React.createElement(React.Fragment, null, React.createElement(_buttons.AddTechButton, {
+    handleClickOpen: handleClickOpen
+  }), React.createElement(_customDialog.default, {
     open: open,
-    onClose: handleClose,
-    PaperProps: {
-      style: {
-        backgroundColor: _theme.theme.customPalette.tuna
-      }
-    }
+    onClose: handleClose
   }, React.createElement(_core.Typography, {
     className: classes.dialogTitleStyle
   }, "Provide required answers."), React.createElement(_formik.Formik, {
@@ -101340,44 +101674,15 @@ var CustomModal = function CustomModal(_a) {
     var isSubmitting = _a.isSubmitting;
     return React.createElement(_formik.Form, {
       className: classes.dialogWrapper
-    }, React.createElement("div", {
-      className: classes.textFieldsWrapper
-    }, "//Todo refactor this piece of spaghetti", React.createElement(_formik.Field, {
-      className: classes.textFieldStyle,
-      variant: "outlined",
-      name: "name",
-      component: _formikMaterialUi.TextField,
-      label: "Enter the name of the technology."
-    }), React.createElement(_formik.Field, {
-      className: classes.textFieldStyle,
-      variant: "outlined",
-      component: _formikMaterialUi.TextField,
-      name: "language",
-      label: "Provide a programming language."
-    }), React.createElement(_formik.Field, {
-      variant: "outlined",
-      className: classes.textFieldStyle,
-      component: _formikMaterialUi.TextField,
-      name: "description",
-      label: "Add description."
-    }), React.createElement(_formik.Field, {
-      variant: "outlined",
-      className: classes.textFieldStyle,
-      component: _formikMaterialUi.TextField,
-      name: "initRelease",
-      type: "number",
-      label: "Enter the technology release year."
-    })), React.createElement(_Button.default, {
-      className: classes.addNewButton,
-      disabled: isSubmitting,
-      type: "submit"
-    }, "Add"));
+    }, React.createElement(_fields.default, null), React.createElement(_buttons.FormikAddButton, {
+      disabled: isSubmitting
+    }));
   })));
 };
 
 var _default = CustomModal;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./modal.styles":"src/componets/technologyPage/modal/modal.styles.tsx","@material-ui/core/Button":"node_modules/@material-ui/core/esm/Button/index.js","@material-ui/core/Dialog":"node_modules/@material-ui/core/esm/Dialog/index.js","./schema":"src/componets/technologyPage/modal/schema.ts","formik":"node_modules/formik/dist/formik.esm.js","formik-material-ui":"node_modules/formik-material-ui/dist/formik-material-ui.es6.js","../../../hooks/useModal":"src/hooks/useModal.ts","@material-ui/core":"node_modules/@material-ui/core/esm/index.js","../../../theme":"src/theme/index.ts"}],"src/componets/technologyPage/modal/index.ts":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./modal.styles":"src/componets/technologyPage/modal/modal.styles.tsx","./schema":"src/componets/technologyPage/modal/schema.ts","formik":"node_modules/formik/dist/formik.esm.js","../../../hooks/useModal":"src/hooks/useModal.ts","@material-ui/core":"node_modules/@material-ui/core/esm/index.js","./fields":"src/componets/technologyPage/modal/fields/index.ts","../../baseComponents/buttons":"src/componets/baseComponents/buttons/index.ts","../../baseComponents/customDialog":"src/componets/baseComponents/customDialog/index.ts"}],"src/componets/technologyPage/modal/index.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -102121,7 +102426,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61771" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62247" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
