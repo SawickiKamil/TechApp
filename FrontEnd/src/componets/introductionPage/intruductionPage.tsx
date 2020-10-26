@@ -26,7 +26,7 @@ const IntrotudctionPage: React.FC = () => {
     <BaseSection onClick={handleClick} title={title} buttonText={buttonText}>
       <>
         <Typography className={classes.titleStyle}>
-          Technologies I used
+          Used Technologies
         </Typography>
         <List
           technologies={FRONT_END}

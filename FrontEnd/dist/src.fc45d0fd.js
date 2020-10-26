@@ -83980,12 +83980,6 @@ var useStyles = (0, _makeStyles.default)(function (theme) {
       justifyContent: 'center',
       alignItems: 'center',
       flexDirection: 'column'
-    },
-    buttonWrapper: {
-      margin: '30px 0',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'flex-end'
     }
   });
 });
@@ -84162,7 +84156,399 @@ Object.defineProperty(exports, "default", {
 var _header = _interopRequireDefault(require("./header"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./header":"src/componets/baseComponents/baseSection/header/header.tsx"}],"src/componets/baseComponents/baseSection/baseSection.tsx":[function(require,module,exports) {
+},{"./header":"src/componets/baseComponents/baseSection/header/header.tsx"}],"src/componets/baseComponents/buttons/formikButton/formikButton.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  return (0, _createStyles.default)({
+    addNewButton: {
+      marginTop: 30,
+      backgroundColor: theme.customPalette.green,
+      borderRadius: 0,
+      color: theme.customPalette.white,
+      fontWeight: 'bold',
+      '&:hover': {
+        backgroundColor: theme.customPalette.lightBlue
+      }
+    }
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/formikButton/formikButton.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.FormikAddButton = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _formikButton = _interopRequireDefault(require("./formikButton.styles"));
+
+var _core = require("@material-ui/core");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var FormikAddButton = function FormikAddButton(_a) {
+  var disabled = _a.disabled;
+  var classes = (0, _formikButton.default)();
+  return React.createElement(_core.Button, {
+    className: classes.addNewButton,
+    disabled: disabled,
+    type: "submit"
+  }, "Add");
+};
+
+exports.FormikAddButton = FormikAddButton;
+},{"react":"node_modules/react/index.js","./formikButton.styles":"src/componets/baseComponents/buttons/formikButton/formikButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/formikButton/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _formikButton = require("./formikButton");
+
+Object.keys(_formikButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _formikButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _formikButton[key];
+    }
+  });
+});
+},{"./formikButton":"src/componets/baseComponents/buttons/formikButton/formikButton.tsx"}],"src/componets/baseComponents/buttons/addTechButton/addTechButton.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  var _a;
+
+  return (0, _createStyles.default)({
+    modalButtonStyle: (_a = {
+      width: '100%',
+      height: 70,
+      borderRadius: 3,
+      border: "solid 2px " + theme.customPalette.lightPink,
+      boxShadow: '0 16px 27px -10px rgba(0, 0, 0, 0.79), 0 0 24px 0 rgba(255, 180, 141, 0.23)',
+      backgroundColor: 'transparent',
+      textTransform: 'capitalize',
+      marginBottom: 20,
+      color: theme.customPalette.lightPink,
+      fontSize: 18
+    }, _a[theme.breakpoints.up('sm')] = {
+      width: 450,
+      height: 80,
+      marginBottom: 30
+    }, _a['&:hover'] = {
+      opacity: 0.8,
+      textDecoration: 'none',
+      transition: 'all .4s ease'
+    }, _a)
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/addTechButton/addTechButton.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.AddTechButton = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _addTechButton = _interopRequireDefault(require("./addTechButton.styles"));
+
+var _core = require("@material-ui/core");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var AddTechButton = function AddTechButton(_a) {
+  var handleClickOpen = _a.handleClickOpen;
+  var classes = (0, _addTechButton.default)();
+  return React.createElement(_core.Button, {
+    className: classes.modalButtonStyle,
+    onClick: handleClickOpen
+  }, "Add new technology");
+};
+
+exports.AddTechButton = AddTechButton;
+},{"react":"node_modules/react/index.js","./addTechButton.styles":"src/componets/baseComponents/buttons/addTechButton/addTechButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/addTechButton/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _addTechButton = require("./addTechButton");
+
+Object.keys(_addTechButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _addTechButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _addTechButton[key];
+    }
+  });
+});
+},{"./addTechButton":"src/componets/baseComponents/buttons/addTechButton/addTechButton.tsx"}],"src/componets/baseComponents/buttons/deleteButton/deleteButton.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  var _a;
+
+  return (0, _createStyles.default)({
+    deleteButton: (_a = {
+      width: 200,
+      backgroundColor: theme.customPalette.red,
+      '&:hover': {
+        backgroundColor: theme.customPalette.darkRed,
+        transition: 'all .4s ease'
+      }
+    }, _a[theme.breakpoints.down('sm')] = {
+      width: 100,
+      fontSize: 16
+    }, _a)
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/deleteButton/deleteButton.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.DeleteButton = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _deleteButton = _interopRequireDefault(require("./deleteButton.styles"));
+
+var _core = require("@material-ui/core");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var DeleteButton = function DeleteButton(_a) {
+  var onDelete = _a.onDelete,
+      _id = _a._id;
+  var classes = (0, _deleteButton.default)();
+  var handleDelete = React.useCallback(function (event) {
+    onDelete(_id);
+  }, [onDelete, _id]);
+  return React.createElement(_core.Button, {
+    onClick: handleDelete,
+    className: classes.deleteButton
+  }, "Delete");
+};
+
+exports.DeleteButton = DeleteButton;
+},{"react":"node_modules/react/index.js","./deleteButton.styles":"src/componets/baseComponents/buttons/deleteButton/deleteButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/deleteButton/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _deleteButton = require("./deleteButton");
+
+Object.keys(_deleteButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _deleteButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _deleteButton[key];
+    }
+  });
+});
+},{"./deleteButton":"src/componets/baseComponents/buttons/deleteButton/deleteButton.tsx"}],"src/componets/baseComponents/buttons/navigationButton/navigationButton.styles.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
+
+var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var useStyles = (0, _makeStyles.default)(function (theme) {
+  return (0, _createStyles.default)({
+    buttonWrapper: {
+      margin: '30px 0',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'flex-end'
+    }
+  });
+});
+var _default = useStyles;
+exports.default = _default;
+},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/navigationButton/navigationButton.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.NavigationButton = void 0;
+
+var React = _interopRequireWildcard(require("react"));
+
+var _navigationButton = _interopRequireDefault(require("./navigationButton.styles"));
+
+var _core = require("@material-ui/core");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+var NavigationButton = function NavigationButton(_a) {
+  var buttonText = _a.buttonText,
+      onClick = _a.onClick;
+  var classes = (0, _navigationButton.default)();
+  return React.createElement("div", {
+    className: classes.buttonWrapper
+  }, React.createElement(_core.Button, {
+    onClick: onClick
+  }, buttonText));
+};
+
+exports.NavigationButton = NavigationButton;
+},{"react":"node_modules/react/index.js","./navigationButton.styles":"src/componets/baseComponents/buttons/navigationButton/navigationButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/navigationButton/index.tsx":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _navigationButton = require("./navigationButton");
+
+Object.keys(_navigationButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _navigationButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _navigationButton[key];
+    }
+  });
+});
+},{"./navigationButton":"src/componets/baseComponents/buttons/navigationButton/navigationButton.tsx"}],"src/componets/baseComponents/buttons/index.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _formikButton = require("./formikButton");
+
+Object.keys(_formikButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _formikButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _formikButton[key];
+    }
+  });
+});
+
+var _addTechButton = require("./addTechButton");
+
+Object.keys(_addTechButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _addTechButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _addTechButton[key];
+    }
+  });
+});
+
+var _deleteButton = require("./deleteButton");
+
+Object.keys(_deleteButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _deleteButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _deleteButton[key];
+    }
+  });
+});
+
+var _navigationButton = require("./navigationButton");
+
+Object.keys(_navigationButton).forEach(function (key) {
+  if (key === "default" || key === "__esModule") return;
+  if (key in exports && exports[key] === _navigationButton[key]) return;
+  Object.defineProperty(exports, key, {
+    enumerable: true,
+    get: function () {
+      return _navigationButton[key];
+    }
+  });
+});
+},{"./formikButton":"src/componets/baseComponents/buttons/formikButton/index.ts","./addTechButton":"src/componets/baseComponents/buttons/addTechButton/index.ts","./deleteButton":"src/componets/baseComponents/buttons/deleteButton/index.ts","./navigationButton":"src/componets/baseComponents/buttons/navigationButton/index.tsx"}],"src/componets/baseComponents/baseSection/baseSection.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -84174,11 +84560,11 @@ var React = _interopRequireWildcard(require("react"));
 
 var _baseSection = _interopRequireDefault(require("./baseSection.styles"));
 
-var _core = require("@material-ui/core");
-
 var _footer = _interopRequireDefault(require("../footer"));
 
 var _header = _interopRequireDefault(require("./header"));
+
+var _buttons = require("../buttons");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -84198,16 +84584,15 @@ var BaseSection = function BaseSection(_a) {
     title: title
   }), React.createElement("section", {
     className: classes.sectionWrapper
-  }, children), React.createElement("div", {
-    className: classes.buttonWrapper
-  }, React.createElement(_core.Button, {
-    onClick: onClick
-  }, buttonText)), React.createElement(_footer.default, null));
+  }, children), React.createElement(_buttons.NavigationButton, {
+    onClick: onClick,
+    buttonText: buttonText
+  }), React.createElement(_footer.default, null));
 };
 
 var _default = BaseSection;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./baseSection.styles":"src/componets/baseComponents/baseSection/baseSection.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js","../footer":"src/componets/baseComponents/footer/index.ts","./header":"src/componets/baseComponents/baseSection/header/index.ts"}],"src/componets/introductionPage/list/list.styles.tsx":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./baseSection.styles":"src/componets/baseComponents/baseSection/baseSection.styles.tsx","../footer":"src/componets/baseComponents/footer/index.ts","./header":"src/componets/baseComponents/baseSection/header/index.ts","../buttons":"src/componets/baseComponents/buttons/index.ts"}],"src/componets/introductionPage/list/list.styles.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -84452,7 +84837,7 @@ var IntrotudctionPage = function IntrotudctionPage() {
     buttonText: buttonText
   }, React.createElement(React.Fragment, null, React.createElement(_core.Typography, {
     className: classes.titleStyle
-  }, "Technologies I used"), React.createElement(_list.default, {
+  }, "Used Technologies"), React.createElement(_list.default, {
     technologies: _index.FRONT_END,
     title: "Front-End:",
     description: _index.FrontEndDescription
@@ -101361,309 +101746,7 @@ Object.defineProperty(exports, "default", {
 var _fields = _interopRequireDefault(require("./fields"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./fields":"src/componets/technologyPage/modal/fields/fields.tsx"}],"src/componets/baseComponents/buttons/formikButton/formikButton.styles.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
-
-var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var useStyles = (0, _makeStyles.default)(function (theme) {
-  return (0, _createStyles.default)({
-    addNewButton: {
-      marginTop: 30,
-      backgroundColor: theme.customPalette.green,
-      borderRadius: 0,
-      color: theme.customPalette.white,
-      fontWeight: 'bold',
-      '&:hover': {
-        backgroundColor: theme.customPalette.lightBlue
-      }
-    }
-  });
-});
-var _default = useStyles;
-exports.default = _default;
-},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/formikButton/formikButton.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.FormikAddButton = void 0;
-
-var React = _interopRequireWildcard(require("react"));
-
-var _formikButton = _interopRequireDefault(require("./formikButton.styles"));
-
-var _core = require("@material-ui/core");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var FormikAddButton = function FormikAddButton(_a) {
-  var disabled = _a.disabled;
-  var classes = (0, _formikButton.default)();
-  return React.createElement(_core.Button, {
-    className: classes.addNewButton,
-    disabled: disabled,
-    type: "submit"
-  }, "Add");
-};
-
-exports.FormikAddButton = FormikAddButton;
-},{"react":"node_modules/react/index.js","./formikButton.styles":"src/componets/baseComponents/buttons/formikButton/formikButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/formikButton/index.ts":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _formikButton = require("./formikButton");
-
-Object.keys(_formikButton).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _formikButton[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _formikButton[key];
-    }
-  });
-});
-},{"./formikButton":"src/componets/baseComponents/buttons/formikButton/formikButton.tsx"}],"src/componets/baseComponents/buttons/addTechButton/addTechButton.styles.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
-
-var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var useStyles = (0, _makeStyles.default)(function (theme) {
-  var _a;
-
-  return (0, _createStyles.default)({
-    modalButtonStyle: (_a = {
-      width: '100%',
-      height: 70,
-      borderRadius: 3,
-      border: "solid 2px " + theme.customPalette.lightPink,
-      boxShadow: '0 16px 27px -10px rgba(0, 0, 0, 0.79), 0 0 24px 0 rgba(255, 180, 141, 0.23)',
-      backgroundColor: 'transparent',
-      textTransform: 'capitalize',
-      marginBottom: 20,
-      color: theme.customPalette.lightPink,
-      fontSize: 18
-    }, _a[theme.breakpoints.up('sm')] = {
-      width: 450,
-      height: 80,
-      marginBottom: 30
-    }, _a['&:hover'] = {
-      opacity: 0.8,
-      textDecoration: 'none',
-      transition: 'all .4s ease'
-    }, _a)
-  });
-});
-var _default = useStyles;
-exports.default = _default;
-},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/addTechButton/addTechButton.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.AddTechButton = void 0;
-
-var React = _interopRequireWildcard(require("react"));
-
-var _addTechButton = _interopRequireDefault(require("./addTechButton.styles"));
-
-var _core = require("@material-ui/core");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var AddTechButton = function AddTechButton(_a) {
-  var handleClickOpen = _a.handleClickOpen;
-  var classes = (0, _addTechButton.default)();
-  return React.createElement(_core.Button, {
-    className: classes.modalButtonStyle,
-    onClick: handleClickOpen
-  }, "Add new technology");
-};
-
-exports.AddTechButton = AddTechButton;
-},{"react":"node_modules/react/index.js","./addTechButton.styles":"src/componets/baseComponents/buttons/addTechButton/addTechButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/addTechButton/index.ts":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _addTechButton = require("./addTechButton");
-
-Object.keys(_addTechButton).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _addTechButton[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _addTechButton[key];
-    }
-  });
-});
-},{"./addTechButton":"src/componets/baseComponents/buttons/addTechButton/addTechButton.tsx"}],"src/componets/baseComponents/buttons/deleteButton/deleteButton.styles.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _makeStyles = _interopRequireDefault(require("@material-ui/styles/makeStyles"));
-
-var _createStyles = _interopRequireDefault(require("@material-ui/styles/createStyles"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var useStyles = (0, _makeStyles.default)(function (theme) {
-  var _a;
-
-  return (0, _createStyles.default)({
-    deleteButton: (_a = {
-      width: 200,
-      backgroundColor: theme.customPalette.red,
-      '&:hover': {
-        backgroundColor: theme.customPalette.darkRed,
-        transition: 'all .4s ease'
-      }
-    }, _a[theme.breakpoints.down('sm')] = {
-      width: 100,
-      fontSize: 16
-    }, _a)
-  });
-});
-var _default = useStyles;
-exports.default = _default;
-},{"@material-ui/styles/makeStyles":"node_modules/@material-ui/styles/esm/makeStyles/index.js","@material-ui/styles/createStyles":"node_modules/@material-ui/styles/esm/createStyles/index.js"}],"src/componets/baseComponents/buttons/deleteButton/deleteButton.tsx":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.DeleteButton = void 0;
-
-var React = _interopRequireWildcard(require("react"));
-
-var _deleteButton = _interopRequireDefault(require("./deleteButton.styles"));
-
-var _core = require("@material-ui/core");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-var DeleteButton = function DeleteButton(_a) {
-  var onDelete = _a.onDelete,
-      _id = _a._id;
-  var classes = (0, _deleteButton.default)();
-  var handleDelete = React.useCallback(function (event) {
-    onDelete(_id);
-  }, [onDelete, _id]);
-  return React.createElement(_core.Button, {
-    onClick: handleDelete,
-    className: classes.deleteButton
-  }, "Delete");
-};
-
-exports.DeleteButton = DeleteButton;
-},{"react":"node_modules/react/index.js","./deleteButton.styles":"src/componets/baseComponents/buttons/deleteButton/deleteButton.styles.tsx","@material-ui/core":"node_modules/@material-ui/core/esm/index.js"}],"src/componets/baseComponents/buttons/deleteButton/index.ts":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _deleteButton = require("./deleteButton");
-
-Object.keys(_deleteButton).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _deleteButton[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _deleteButton[key];
-    }
-  });
-});
-},{"./deleteButton":"src/componets/baseComponents/buttons/deleteButton/deleteButton.tsx"}],"src/componets/baseComponents/buttons/index.ts":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _formikButton = require("./formikButton");
-
-Object.keys(_formikButton).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _formikButton[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _formikButton[key];
-    }
-  });
-});
-
-var _addTechButton = require("./addTechButton");
-
-Object.keys(_addTechButton).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _addTechButton[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _addTechButton[key];
-    }
-  });
-});
-
-var _deleteButton = require("./deleteButton");
-
-Object.keys(_deleteButton).forEach(function (key) {
-  if (key === "default" || key === "__esModule") return;
-  if (key in exports && exports[key] === _deleteButton[key]) return;
-  Object.defineProperty(exports, key, {
-    enumerable: true,
-    get: function () {
-      return _deleteButton[key];
-    }
-  });
-});
-},{"./formikButton":"src/componets/baseComponents/buttons/formikButton/index.ts","./addTechButton":"src/componets/baseComponents/buttons/addTechButton/index.ts","./deleteButton":"src/componets/baseComponents/buttons/deleteButton/index.ts"}],"src/componets/baseComponents/customDialog/customDialog.tsx":[function(require,module,exports) {
+},{"./fields":"src/componets/technologyPage/modal/fields/fields.tsx"}],"src/componets/baseComponents/customDialog/customDialog.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

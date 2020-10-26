@@ -19,12 +19,6 @@ const useStyles = makeStyles((theme: Theme) =>
       alignItems: 'center',
       flexDirection: 'column',
     },
-    buttonWrapper: {
-      margin: '30px 0',
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'flex-end',
-    },
   })
 );
 

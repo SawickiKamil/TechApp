@@ -1,8 +1,9 @@
 import * as React from 'react';
 import useStyles from './baseSection.styles';
-import { Button } from '@material-ui/core';
+
 import Footer from '../footer';
 import Header from './header';
+import { NavigationButton } from '../buttons';
 
 interface IBaseSectionProps {
   title: string;
@@ -22,9 +23,7 @@ const BaseSection: React.FC<IBaseSectionProps> = ({
     <div className={classes.mainWrapper}>
       <Header title={title} />
       <section className={classes.sectionWrapper}>{children}</section>
-      <div className={classes.buttonWrapper}>
-        <Button onClick={onClick}>{buttonText}</Button>
-      </div>
+      <NavigationButton onClick={onClick} buttonText={buttonText} />
       <Footer />
     </div>
   );
